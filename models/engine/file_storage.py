@@ -55,3 +55,6 @@ class FileStorage:
                     self.new(eval(cls)(**value))
         except Exception:
             pass
+    def close(self):
+       """ calls reload() for deserializing the JSON file to objects."""
+       self.reload()
